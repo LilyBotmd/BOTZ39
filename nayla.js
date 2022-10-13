@@ -224,7 +224,7 @@ break
 
 case 'waifu':case 'lick':case 'kiss':case 'awoo':case 'hug':case 'cry':case 'cuddle':case 'bully':case 'megumin':case 'shinobu':case 'neko':case 'slap':case 'wink':case 'dance':case 'poke':case 'glomp':case 'bite':case 'nom':case 'handhold':case 'highfive':case 'wave':case 'smile':case 'yeet':case 'bonk':case 'smug':case 'pat':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 fetchJson(`https://api.waifu.pics/sfw/${command}`).then(x => {
 nayla.sendMessage(from, {image:{url:x.url}, caption:"😄", mentions:[sender]},{quoted:nay1})})
 break 
@@ -238,13 +238,13 @@ reply(`[ *ADVICESLIP* ]
 break
 case 'lirik':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-if (!q) return reply("Masukkan judul lagu:)")
+if (!q) return reply("Judul nya mana:)")
 hx.lirik(q).then(result => {reply(`[ *LIRIK* ]\n• *Judul* : ${q}\n• *Lirik* : ${result.lirik}`)});
 break
 case 'chara': case 'anime':  
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-if (!q) return reply("Masukkan nama karakter anime")
-reply("[❗] SEDANG DIPROSES")
+if (!q) return reply("Nama Karakter nya apa")
+reply("Bentar y bang hehe")
 hx.chara(q).then(result => {
 const x4 = []
 Object.keys(result).forEach((i) => {  
@@ -257,7 +257,7 @@ break
 case 'pin': case 'pinterest': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan nama karakter anime")
-reply("[❗] SEDANG DIPROSES")
+reply("Betar y bang hehe")
 hx.pinterest(q).then(result => { 
 const x6 = []
 Object.keys(result).forEach((i) => {  
@@ -270,12 +270,12 @@ break
 case 'ssweb': case 'ss': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan url, contoh? https://google.com")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 nayla.sendMessage(from, {image:{url:`https://api.popcat.xyz/screenshot?url=${q}`}, caption:"😗", mentions:[sender]},{quoted:nay1})
 break
 case 'randomcolor': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 fetchJson("https://api.popcat.xyz/randomcolor").then(x => {
 nayla.sendMessage(from, {image:{url:x.image}, caption:`${x.name}(${x.hex})`, mentions:[sender]},{quoted:nay1})
 })
@@ -845,34 +845,34 @@ break
 case 'girlneko': case 'gilrneko':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q1 && !q2) return reply("Masukkan text1&text2\nContoh? #girlneko aku&kamu")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 nayla.sendMessage(from, {image:{url:`https://ziy.herokuapp.com/api/maker/girlneko?text1=${q1}&text2=${q2}&apikey=xZiyy`}, caption:"👍", mentions:[sender]},{quoted:nay1})
 break
 case 'sadboy':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q1 && !q2) return reply("Masukkan text1&text2\nContoh? #sadboy aku&kamu")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 nayla.sendMessage(from, {image:{url:`https://ziy.herokuapp.com/api/maker/sadboy?text1=${q1}&text2=${q2}&apikey=xZiyy`}, caption:"👍", mentions:[sender]},{quoted:nay1})
 break 
 case 'kaneki': case 'rem': case 'lolimaker':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan text")
-reply("[❗] SEDANG DIPROSES")
+reply("Bentar y bang hehe")
 nayla.sendMessage(from, {image:{url:`https://ziy.herokuapp.com/api/maker/${command}?nama=${q}&apikey=xZiyy`}, caption:"👍", mentions:[sender]},{quoted:nay1})
 break
 case 'audio1': case 'audio2': case 'audio3': case 'audio4': case 'audio5': case 'audio6': case 'audio7': case 'audio8': case 'audio9': case 'audio10': case 'audio11': case 'audio12': case 'audio13': case 'audio14': case 'audio15': case 'audio16': case 'audio17': case 'audio18': case 'audio19': case 'audio20':
 nayla.sendMessage(from, {audio:{url:`https://md-devs.herokuapp.com/${command}.mp3`}, mimetype:'audio/mp4', ptt:true},{quoted:nay1})
 break
 case 'ytmp3':
-if (!q) return reply("Masukkan link nya")
-reply("[❗] SEDANG DIPROSES")
+if (!q) return reply("Linknya mana Saipul?😤")
+reply("Oke banh😅")
 var yt = await youtubedlv2(q).catch(e => { reply("PASTIKAN LINKNYA VALID(LINK YOUTUBE)")})
 var dl_url = await yt.audio["128kbps"].download()
 nayla.sendMessage(from, {audio:{url:dl_url}, mimetype: 'audio/mp4'},{quoted:nay1})
 break
 case 'ytmp4':
-if (!q) return reply("Masukkan link nya")
-reply("[❗] SEDANG DIPROSES")
+if (!q) return reply("Linknya mana Saipul?😤")
+reply("Oke banh😅")
 var yt = await youtubedlv2(q).catch(e => { reply("PASTIKAN LINKNYA VALID(LINK YOUTUBE)")})
 var dl_url = await yt.video["480p"].download()
 nayla.sendMessage(from, {video:{url:dl_url}},{quoted:nay1})
@@ -881,25 +881,25 @@ case 'tiktok': case 'tt':
 reply(`[ *TIKTOK-DL* ]\n• *${prefix}tiktokmp3*\n• *${prefix}tiktokmp4*`)
 break
 case 'ttmp4': case 'ttvideo': case 'tiktokmp4': case 'tiktokvideo':
-if (!q) return reply("Masukkan link nya")
+if (!q) return reply("Linknya mana wuoyy")
 reply("[❗] SEDANG DIPROSES")
 var tt = await tiktokdlv3(q).catch(e => { reply("PASTIKAN LINKNYA VALID(LINK TIKTOK)")})
 nayla.sendMessage(from, {video:{url:tt.video.no_watermark}, caption:"😀", mentions:[sender]},{quoted:nay1})
 break 
 case 'ttmp3': case 'ttaudio': case 'tiktokmp3': case 'tiktokaudio':
-if (!q) return reply("Masukkan link nya")
+if (!q) return reply("Linknya mana wuoyy")
 reply("[❗] SEDANG DIPROSES")
 var tt = await tiktokdlv3(q).catch(e => { reply("PASTIKAN LINKNYA VALID(LINK TIKTOK)")})
 nayla.sendMessage(from, {audio:{url:tt.music}, mimetype:"audio/mp4", mentions:[sender]},{quoted:nay1})
 break
 case 'playmp3': case 'playaudio':
-if (!q) return reply("Masukkan judul")
+if (!q) return reply("Judulnya apa ngab?")
 reply("[❗] SEDANG DIPROSES")
 var yt = await api.downloader.youtube.ytplay(q).catch(e => { reply("PASTIKAN JUDUL BENAR")})
 nayla.sendMessage(from, {audio:{url:yt.result}, mimetype:"audio/mp4"},{quoted:nay1})
 break
 case 'playmp4': case 'playvideo':
-if (!q) return reply("Masukkan judul")
+if (!q) return reply("Judulnya mana ngab")
 reply("[❗] SEDANG DIPROSES")
 var yt = await api.downloader.youtube.ytplayvid(q).catch(e => { reply("PASTIKAN JUDUL BENAR")})
 nayla.sendMessage(from, {video:{url:yt.result}},{quoted:nay1})
@@ -919,7 +919,7 @@ reply(`[ *SEARCH-GRUP* ]
 • *Link* : ${x61.result[0].link}`)
 break
 case 'kusonime':
-if (!q) return reply("Masukkan nama anime")
+if (!q) return reply("Wuoyy wibu nama animek ny ap?")
 var x62 = await api.search.kusonime(q)
 reply(`[ *KUSONIME* ]
 • *Judul* : ${x62.result.judul}
